@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* null -> 프로그래머가 의도적으로 값이 없는 값을 부여한 것
+       undefined -> 프로그래머의 의도가 없이 그냥 값이 없는 것 */
+       alert(undefined == null); /* true */
+       alert(undefined === null); /* false */
+       /* JS에서 숫자 1 제외 모두 false로 처리 */
+       alert(true == 1); /* true */
+       alert(true == 2); /* false */
+       alert(true === 1); /* false */
+       /* Nan -> 0/0 같이 계산이 안되는 수 */
+       alert(NaN == NaN); /* false */
+  </script>
+</body>
+</html>
