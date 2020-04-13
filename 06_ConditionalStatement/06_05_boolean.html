@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* false 와 0 이외에 false로 간주되는 데이터형 */
+    if('') { /* JS 에서 빈 문자열은 false 로 간주 */
+      alert('empty1');
+    }
+    if(!'') {
+      alert('empty2');
+    }
+
+    if(undefined) { /* JS 에서 undefined 은 false 로 간주 */
+      alert('empty3');
+    }
+    if(!undefined) {
+      alert('empty4');
+    }
+    /* null, NaN 도 false 로 간주 */
+  </script>
+</body>
+</html>

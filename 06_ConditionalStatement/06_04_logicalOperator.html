@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    if(true && false) { /* 전체가 참이여야 참 */
+      alert(1);
+    }
+
+    var id = prompt('ID를 입력해');
+    var password = prompt('PASSWORD 입력해');
+      if(id == 'java' && password == '2323') {
+          alert('로그인 성공' + " " + id + "님 반가워요");  
+      } else {
+        alert('ID가 틀렸어');
+      }
+
+      if(true || false) { /* 둘 중에 하나가 참이면 참 */
+      alert(1);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* 안쪽부터 실행(prompt 먼저) */
+    document.write(prompt('당신의 나이는?')*2);
+  </script>
+  <script>
+      var id = prompt('ID를 입력해');
+      if(id == 'java') {
+        var password = prompt('PASSWORD 입력해');
+        if(password == '2323') {
+          alert('로그인 성공' + " " + id + "님 반가워요");  
+        } else
+          alert('PASSWORD 틀렸어');
+      } else {
+        alert('ID가 틀렸어');
+      }
+  </script>
+</body>
+</html>
