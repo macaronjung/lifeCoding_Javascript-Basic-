@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+      <script>
+        /* return */
+        /* 1.함수를 종료시킴 -> 이 다음 코드는 미실행 */
+        /* 2.return 뒤에 있는 값을 함수의 출력값으로 반환(함수 바깥으로 내보냄) */
+        function get_member1() {
+          return "Hello1";
+          /* 이미 위에서 return 으로 함수가 종료 되었으므로 
+             return Hello2 는 미실행됨 */
+          return "Hello2";
+        }
+
+        function get_member2() {
+          return "JS";
+        }
+
+        alert(get_member1());
+        alert(get_member2());
+      </script>
+</head>
+<body>
+  
+</body>
+</html>

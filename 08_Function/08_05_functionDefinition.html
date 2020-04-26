@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+      <script>
+        /* 함수가 변수에 대입됨 */
+        numbering = function() {
+          i = 0;
+          while(i < 10) {
+            document.write(i);
+            i += 1;
+          }
+        }
+        /* 따라서 함수를 호출하는 것 처럼 뒤에 () 붙여야함 */
+        numbering();
+      </script>
+
+      <script>
+        (function() {
+          i = 0;
+          while(i < 10) {
+            document.write(i);
+            i += 1;
+          }
+        /* 1.함수 정의 
+           2.함수 괄호로 묶음 
+           3.함수를 호출할때 사용하는 기호 */
+        })(); /* 정의와 호출을 동시에 -> 익명함수(1회성 호출시 사용) */
+      </script>
+</head>
+<body>
+  
+</body>
+</html>
