@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  
+  <script>
+    /* 혼자코딩 방식 */
+    for(var i = 0; i < 100; i++) {
+      if(i < 10) {
+        document.write("UseOverlap " + "0" + i + "<br />");
+      } else {  
+        document.write("UseOverlap " + i + "<br />");
+      }
+    }
+
+    document.write("<br />");
+
+    /* 생활코딩 방식 */
+    for(var i = 0; i < 10; i++) {
+      for(var j = 0; j < 10; j++) {
+        /* 문자와 숫자 결합시 JS는 숫자를 문자로 변환시킴 */
+        document.write("UseOverlap(LifeCoding) " + i + j + "<br />");
+      }
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

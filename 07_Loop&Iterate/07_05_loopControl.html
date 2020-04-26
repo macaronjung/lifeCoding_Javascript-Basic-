@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  
+  <script>
+    for(var i = 0; i < 10; i++) {
+      if(i === 5) {
+        /* break -> 반복문을 완전 종료 후 반복문 탈출 */
+        break;
+      }
+      document.write("Loop Control Break " + i + "<br />");
+    }
+
+    for(var i = 0; i < 10; i++) {
+      if(i === 5) {
+        /* continue -> 조건식에 맞을 경우에만 반복문 순간 중지 후 다시 반복문 실행 */
+        continue;
+      }
+      document.write("Loop Control continue " + i + "<br />");
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
