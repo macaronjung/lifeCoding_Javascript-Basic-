@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    var grades = {"coder": 90, "designer": 50, "manager": 70};
+
+    /* 객체 사용 반복문 -> 배열에서도 사용가능 */
+    /* for(key in 변수명) { -> 변수그릇에서 key값을 하나씩 가져와 key에 담음
+      document.write(key + 변수명[key]);
+    } */
+
+    /* 키값 불러오기 */
+    for(key in grades) {
+      console.log(key);
+    }
+    for(var name in grades) {
+      document.write(name + " " + grades[name]);
+    }
+
+    /* 밸류값 불러오기 */
+    for(key in grades) {
+      console.log(grades[key]);
+    }
+  </script>
+</head>
+<body>
+
+  <ul>
+    <!-- 반복문 이용 리스트 만들기 -->
+    <script>
+      var grades = {"coder": 90, "designer": 50, "manager": 70};
+      for(var name in grades) {
+      document.write("<li>key : " + name + " value :  " + grades[name] + "</li>");
+    }
+    </script>
+  </ul>
+</body>
+</html>

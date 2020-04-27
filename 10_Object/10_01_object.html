@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- 배열 -> 인덱스가 자동으로 설정(0부터) -->
+  <!-- 객체 -> 인덱스를 사용자 마음대로 설정(아무거나) -->
+  <script>
+    /* 객체에서의 인덱스는 문자 */
+    /* 뒤에 숫자(숫자가 아니여도 가능)는 인덱스에 해당하는 값 */
+    /* 변수를 선언하고 변수에 저장해야 변수를 이용해서 객체를 사용가능 */
+                /* "key" : value */
+    var grades = {"coder": 90, "designer": 50, "manager": 70};
+
+    /* {} = new Object() -> 객체 생성 */
+    var grades = new Object();
+    grades["coder"] = 9;
+    grades["designer"] = 5;
+    grades["manager"] = 7;
+
+    /* 객체 접근 방식 */
+    alert(grades["coder"]);
+    alert(grades.designer);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

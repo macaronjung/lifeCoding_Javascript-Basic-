@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- 객체에는 객체 뿐만 아니라 함수도 담을 수 있음 -->
+  <!-- JS에서는 함수도 값이므로 변수에 저장 가능 -->
+  <script>
+    /* { } 로 묶었으니 객체임 */
+    var grades = {
+      /* 객체 안에 객체 */       /* 여러개니까 , 필수 */
+      "list" : {'JS': 10, "JAVA" : 8, "C" : 80},
+      /* 객체 안에 함수 */
+      "show" : function() {
+        /* alert("Hello World"); */
+        /* this -> 약속된 변수 
+          -> 함수가 속해있는 변수를 의미 */
+          console.log(this.list);
+
+          for(var name in this.list) {
+            console.log(name, this.list[name]);
+          }
+      }
+    }
+    /* 함수를 사용해야하므로 뒤에 () 추가 */
+    /* 객체에 소속된 함수를 사용하기 */
+    grades["show"](); /* = grades.show(); */
+    alert(grades["list"]["C"]);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
