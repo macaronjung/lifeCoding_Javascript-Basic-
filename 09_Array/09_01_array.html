@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- 연관된 데이터를 모아서 통으로 관리하기 위해 
+      사용하는 데이터 타입 (각각의 데이터 -> 원소(=element))
+      변수는 하나의 데이터를 저장 / 배열은 여러개의 데이터를 저장-->
+
+  <script>
+    var member = ["JS", "JQ", "React"]
+    alert(member);
+    /* 0,1,2 -> 색인(=index) */
+    alert(member[0]);
+    alert(member[1]);
+
+    function get_members() {
+      return ["1", "2", "3"];
+    }
+    /* 기존과는 다르게 여러개의 출력이 가능 */
+    var members = get_members();
+    document.write(members[0]);
+    document.write(members[1]);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

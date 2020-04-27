@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    function get_members() {
+      return ["qwe", "asd", "zxc"];
+    }
+
+    /* 변수 선언(함수 호출) */
+    members = get_members();
+
+    /* 반복문 + 배열로 원소의 수와 상관없이 출력하기 */
+    /* 함수 get_members()가 아닌 변수 members의 길이로 적어야함 */
+    /* 대문자 변환(내장 함수 .toUpperCase() 이용) */
+    for(i = 0; i<members.length; i++) {
+      document.write(members[i].toUpperCase() + "<br />");
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
