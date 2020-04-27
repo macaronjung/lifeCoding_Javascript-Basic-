@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+
+    /* 전역변수를 사용할때는 조심히!!! */
+    var vscope = "global";
+    function fscope() {
+      /* var 가 존재, 미존재하는 변수 둘다 실행 시 */
+      /* 이미 지역변수가 생성됨 */
+      var vscope = "local";
+      /* 다시 할당해도 우선적으로 지역변수의 존재를 찾음 
+        없으면 전역변수를 사용함 */
+        /* 즉, 지금은 지역변수에 값을 할당한 것임 */
+      vscope = "local";
+    }
+    fscope();
+    alert(vscope); /* -> global */
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

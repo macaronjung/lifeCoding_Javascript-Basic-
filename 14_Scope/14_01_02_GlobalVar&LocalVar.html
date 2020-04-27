@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+
+    /* 함수 외부에서 var로 생성시 전역변수로 설정 */
+    var vscope = "global";
+    function fscope() {
+      /* 지역변수 앞 var o -> 지역변수로 생성됨 */
+      var vscope = "local";
+      /* 지역변수 앞 var x -> 전역변수로 생성됨 */
+      /* vscope = "local"; */
+      /* local의 vscope를 변경하는 것이 아니라 
+        global의 vscope를 변경하게 됨 */
+    }
+    fscope();
+    alert(vscope); /* -> global */
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

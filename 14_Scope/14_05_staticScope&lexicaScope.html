@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+
+    /* JS는 함수가 선언된 시점에서의 유효범위를 가짐 */
+    var i = 5;
+
+    function a() {
+      var i = 10;
+      b();
+    }
+
+    function b() {
+      /* 그러면 지금 i 는 누구??? */
+      /* 1.함수 b() 안에서 i 라는 지역변수가 있는지 찾음
+         2.지역변수가 미존재 -> 전역변수를 찾음 
+         3.함수 b()가 선언되었을때 전역변수의 값은 5임
+         4.즉, 함수 a()로 돌아가서 a의 지역변수의 값을 찾아오지 않음 
+         -> 사용될때가 아닌 정의될때의 전역변수를 사용!!!(->정적 유효범위) */
+      document.write(i);
+    }
+
+    a();
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

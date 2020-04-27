@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    /* 전역변수이므로 어디서나 접근가능 */
+    var vscope = "global";
+    /* fscope() 함수는 함수내에서 선언하지 않은
+      변수 vscope에 접근이 가능함 */
+    function fscope() {
+      var vscope = "local";
+      /* 자신과 가장 가까운 변수를 실행(지역변수 먼저) */
+      alert(vscope);
+
+      var localVar = "localVar";
+      alert(localVar);
+    }
+    fscope();
+    /* 지역변수를 호출하였으므로 미실행 */
+    alert(localVar);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

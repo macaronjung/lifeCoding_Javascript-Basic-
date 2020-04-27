@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+
+    /* JS는 함수에 대한 유효범위만을 제공한다 -> 자바같이 {}에 대한 
+      유효범위를 제공하는 것과 다름!!! */
+      for(var i = 0; i < 1; i++) {
+        var name = "Hello";
+      }
+      alert(name);
+      /* {}를 이탈해도 name을 사용가능 */
+      /* JS는 함수를 제외하면 다른 곳에서는 지역변수의 의미를 미포함 */
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

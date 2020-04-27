@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    /* 이런 전역변수도 사용하기 싫을 때 전체를 함수로 묶어서 사용 
+      -> 익명함수로 실행 */
+    (function() {
+      /* 함수안에서 var로 선언되었기 때문에 지역변수 */
+      var MYAPP = {}
+
+      MYAPP.calculator = {
+        "left" : null,
+        "right" : null
+      }
+      MYAPP.coordinate = {
+        "left" : null,
+        "right" : null
+      }
+
+      MYAPP.calculator.left = 10;
+      MYAPP.calculator.right = 20;
+      function sum() {
+        return MYAPP.calculator.left + MYAPP.calculator.right;
+      }
+      document.write(sum());
+  }());
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

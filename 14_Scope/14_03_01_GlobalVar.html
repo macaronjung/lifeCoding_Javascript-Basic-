@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    /* 객체를 값으로 가진 전역변수(함수에 속해있지 않으므로) */
+    var MYAPP = {}
+    /* 전역변수 하나만을 설정 후 필요에 따라 사용 */
+    /* 다른 전역변수는 하나로 설정한 전역변수의 소속으로 만듬(이름 겹침 방지) */
+
+    /* 객체 안에 존재하는 변수 -> 속성 (calculator) */
+    MYAPP.calculator = {
+      /* 속성의 값으로 다시 객체가 옴 */
+      "left" : null,
+      "right" : null
+    }
+    MYAPP.coordinate = {
+      "left" : null,
+      "right" : null
+    }
+
+    MYAPP.calculator.left = 10;
+    MYAPP.calculator.right = 20;
+    function sum() {
+      return MYAPP.calculator.left + MYAPP.calculator.right;
+    }
+    document.write(sum());
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    
+    function a() {
+      /* i -> 전역변수 */
+      /* 하단 반복문에서 i = 0; 으로 계속 초기화 되어 무한반복 */
+      i = 0;
+    }
+
+    /* i는 다른 함수 소속되어 있지 않기 때문에 전역변수임 */
+    for(var i = 0; i<5; i++) {
+      a();
+      document.write(i);
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
