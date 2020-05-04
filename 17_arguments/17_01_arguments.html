@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    /* arguments ->  함수에 존재하는 변수에 담신 숨겨진 유사 배열 */
+    /* 매개변수가 없네(그 값은 인자 / 둘을 엄격하게 구분하지는 않음) */
+    function sum() {
+      /* _sum -> 출력할 값을 저장할 변수 */
+      var i, _sum = 0;
+      /* arguments -> 사용자가 전달한 인자가 내부에 존재 
+        1. .length를 통해 이 객체를 포함한 함수가 몇개의 인자가 있는지 알 수 있음 
+        2. arguments[i]를 통해 sum으로 들어온 인자의 특정자릿수의 값을 알 수 있음 */
+      /* 사용자가 전달한 인자 만큼 for 문이 반복하게 됨 */
+      for(i=0; i<arguments.length; i++) {
+        document.write(i + ' : ' + arguments[i] + "<br />");
+        _sum += arguments[i];
+      }
+      return _sum;
+    }
+    /* 인자 4개 들어왔네 -> JS는 인자를 마음대로 정해도 에러가 안남 */
+    document.write("result : " + sum(1,2,3,4));
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
