@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- JS에서는 함수도 객체다 -> 일종의 값(변수에 저장이 가능하다) -->
+  <!-- function a() {} -> var a = function() {} -->
+  <script>
+
+    a = { /* 객체 a 정의 ( {로 시작해서 }로 끝났으니까) */
+      /* b 라고 하는 키의 값은 함수전체(=value) */
+      /* b 는 어떤 값을 저장하는 그릇의 역할 -> 변수의 역할 실행 중 */
+      /* 객체 안에서 어떤 변수의 역할을 하는 것 -> 속성(=property) */
+      /* 그 속성에 저장된 값이 함수이면 -> method */
+      b:function() {
+
+      }
+    }
+  </script>
+
+  <script>
+    /* 함수는 값이기 때문에 다른 함수의 인자로 전달 될 수도 있음 */
+    function cal(func, num) {
+        return func(num); /* () 니까 함수 호출하네 */
+      }
+      function increase(num) {
+        return num+1;
+      }
+      function decrease(num) {
+        return num-1;
+      }
+      alert(cal(increase, 1));
+      alert(cal(decrease, 1));
+  </script>
+</head>
+<body>
+
+</body>
+</html>

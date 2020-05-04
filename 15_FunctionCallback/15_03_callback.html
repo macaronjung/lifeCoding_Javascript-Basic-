@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+
+    /* callback -> 어떠한 함수가 수신하는 인자가 함수인 경우 */
+    var numbers = [20,10,5,9,4,54,21,35,2];
+
+    /* callback function -> sort()의 동작 방법을 변경 가능 */
+    /* 값으로서 함수를 사용가능하기 때문에 가능함 */
+    var sortfunc = function(a, b) {
+      /* console.log(a, b); */
+      return a - b;
+
+      /* if(a > b) {
+        return 1;
+      } else if (a < b) {
+        return -1;
+      } else {
+        return 0;
+      } */
+    }
+
+    /* 어떠한 함수 . 앞에 있는 것 -> 객체 */
+    console.log(numbers.sort(sortfunc)); /* sort() -> 객체에 속해 있기 때문에 메소드 */
+  </script>
+</head>
+<body>
+
+</body>
+</html>

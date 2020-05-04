@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+
+    /* 배열에도 함수를 저장 가능 -> 값으로서의 함수 */
+    /* 즉 JS에서 함수는 변수,매개변수,리턴값 등등 여러가지에 사용가능 
+      -> first-class citizen(,object,entity...) */
+    var process = [
+      /* i 의 값이 각각 0,1,2 일때를 상정함 */
+      function(input) { return input + 10;},
+      function(input) { return input * input;},
+      function(input) { return input / 2;}
+    ];
+
+    var input = 1;
+
+    for(var i=0; i<process.length; i++) {
+      /* 위에 input 값이 1이기 때문에 위에서 1 + 10 이 됨 */
+      input = process[i] (input);
+    }
+
+    alert(input);
+  </script>
+</head>
+<body>
+
+</body>
+</html>
