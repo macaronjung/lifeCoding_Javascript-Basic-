@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    /* JS에서 함수는 객체 -> 객체는 속성을 가지고 있음 
+      그 속성에 함수가 들어가 있으면 -> 메소드 */
+    
+    /* 함수 sum은 function 객체의 인스턴스 
+      -> 객체 function의 메소드 apply 호출가능 */
+    function sum(arg1, arg2) {
+      return arg1 + arg2;
+    }
+    alert(sum.apply(null, [1,2])); /* 원래 이런 경우는 사용하면 안됨!(코드 복잡해짐) */
+    /* 첫 번째 인자에 null이 아니라 다른 것이 들어갈 경우에 사용 */
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
