@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    /* closure -> 외부함수의 실행이 끝나서 외부함수가 소멸된 이후에도 
+      내부함수가 외부함수의 변수에 접근 할 수 있는 것 */
+
+    function outter() {
+      var tilte = "Coding Closure";
+      /* 내부함수 리턴 -> 생명주기 종료 */
+      return function() {
+        alert(title);
+      }
+    }
+    var inner = outter();
+    inner();
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

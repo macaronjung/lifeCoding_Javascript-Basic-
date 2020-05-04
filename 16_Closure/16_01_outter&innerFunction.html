@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    /* JS는 함수 안에서 또 다른 함수를 선언 가능 */
+
+    /* 외부함수 */
+    function outter() {
+      /* 내부함수 -> 외부함수의 지역변수에 접근 가능 */
+      function inner() {
+        var title = "Coding JS";
+        alert(title);
+      }
+      inner();
+    }
+    outter();
+
+    function outter() {
+      /* 외부함수의 지역변수에 내부함수가 접근 가능 */
+      var title = "Coding JS~"
+      function inner() {
+        alert(title);
+      }
+      inner();
+    }
+    outter();
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

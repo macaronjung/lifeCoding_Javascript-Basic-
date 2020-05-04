@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    var arr = [];
+    /* i 의 값이 이 함수에서 정한 외부함수 값이 아님 */
+    for(var i=0; i<5; i++) {
+      arr[i] = function(id) {
+        /* 내부함수는 외부함수의 지역변수를 사용 중 */
+        return function() { 
+          return id;
+        }
+        /* 매개변수 인자값 부여 */
+      }(i); /* 호출과 동시에 실행 */
+    }
+    for(var index in arr) {
+      console.log(arr[index]());
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
