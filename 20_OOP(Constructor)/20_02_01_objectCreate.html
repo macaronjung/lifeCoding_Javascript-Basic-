@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    /* 객체(object) -> 데이터를 담을 수 있는 빈 상자(그릇) */
+
+    var person = {}; /* 기본 객체 생성 방법 */
+    /* person 그릇안에 name 변수를 저장함 -> 그 내용은 문자열 macaron */
+    /* 객체 내의 변수를 속성(property)라고 함 */
+    person.name = "macaron";
+
+    /* 프로퍼티에 함수가 저장되었음 
+     -> 그게 바로 메소드 */
+    person.introduce = function() {
+      return "My name is " + this.name;
+    }
+
+    document.write(person.introduce());
+
+    /* 객체를 만드는 과정이 분산되어 있음 -> 중간 코드가 지저분해짐 */
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

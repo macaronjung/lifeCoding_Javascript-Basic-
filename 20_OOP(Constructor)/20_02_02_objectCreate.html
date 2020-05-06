@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    /* 객체를 정의 할 때 값을 세팅하도록 수정 */
+
+    var person = {
+      "name" : "macaron",
+      "introduce" : function() {
+        return "My name is " + this.name;
+      }
+
+    }
+
+    document.write(person.introduce());
+
+    /* 이렇게 작성하면 프로퍼티와 메소드가 중복됨(객체 재사용,복제시) */
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

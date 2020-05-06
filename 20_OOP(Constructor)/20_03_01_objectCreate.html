@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    /* 생성자(constructor) -> 객체를 만드는 역할을 하는 함수 */
+    /* JS에서 함수는 재사용 가능한 로직의 묶음이 아니라 객체를 만드는 창조자 */
+
+    function person() {}
+
+    /* new + 함수 -> 단순 함수가 아닌 '생성자' -> 생성자로 인해 비어있는 객체를 만듬 
+      -> 객체 p에 person{} 을 리턴함 */
+      /* JS는 생성자가 함수에 소속되어 있음(자바와 다름!!!) 
+        즉, JS에서는 클래스라는 것이 존재하지 않음 */
+    var p = new person();
+    p.name = "macaron";
+    p.introduce = function() {
+      return "My name is " + this.name;
+    }
+    document.write(person.introduce());
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

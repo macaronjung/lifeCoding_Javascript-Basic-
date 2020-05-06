@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+
+    function person(name) {
+
+      this.name = name;
+      this.introduce = function() {
+        return "My name is " + this.name;
+      }
+    }
+
+    /* 생성자로 인해 인자(macaron)가 person(macaron) 으로 들어감 */
+    /* 생성자 -> 객체의 초기화 기능 수행(init) */
+    var p1 = new person("macaron");
+    document.write(p1.introduce() + "<br />");
+
+    var p2 = new person("choco");
+    document.write(p2.introduce() + "<br />");
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
