@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    /* 모든 객체는 이 전역객체의 속성(프로퍼티/객체 내의 변수) */
+
+    function func() {
+      alert("Hello???");
+    }
+
+    func();
+    /* 함수 앞에 . 있네 -> 객체네 
+      . 뒤에는 속성인데 함수네 -> 객체의 함수니까 메소드네 */
+    /* window 생략가능 -> 모든 전역변수와 함수는 window 객체의 프로퍼티 */
+    /* 객체를 명시하지 않으면 암시적으로 window의 프로퍼티로 간주됨 */
+    window.func();
+
+    var sayHello = {'func' : function() {
+      alert("Hello");
+    }}
+    sayHello.func();
+    window.sayHello.func();
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
