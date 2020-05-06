@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    
+    var funcThis = null,
+
+    /* 똑같은 함수지만 1. 함수로 호출하면 window를 가리킴 
+      2. 생성자로 사용될때는 생성될 객체를 가리킴*/
+    function func() {
+      /* 변수 funcThis에 값을 할당하는데 앞에 아무 것도 없네 
+        -> 전역변수 funcThis를 가리킴 */
+      funcThis = this;
+    }
+
+    var o1 = func();
+    if(funcThis === window) {
+      document.write("window <br />");
+    }
+
+    var o2 = new func();
+    if(funcThis === o2) {
+      document.write("o2 <br />");
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

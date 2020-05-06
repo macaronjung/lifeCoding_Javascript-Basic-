@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    /* 함수를 어떻게 호출하느냐에 따라서 this가 가리키는 대상이 달라짐 
+      함수와 객체의 관계가 느슨한 JS에서 this는 이 둘을 연결시켜주는 실질적인 연결점 역할 */
+
+    function func() {
+      if(window === this) {
+        document.write("window === this")
+      }
+    }
+
+    func();
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
