@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    /* 상속 + 기능추가 */
+    function person(name) {
+      this.name = name;
+    }
+    
+    person.prototype.name = null;
+    person.prototype.introduce = function() {
+      return "My name is " + this.name;
+    }
+
+    function programmer(name) {
+      this.name = name;
+    }
+    programmer.prototype = new person();
+    programmer.prototype.coding = function() {
+      return "Hello World";
+    }
+
+    var p1 = new programmer("choco");
+    document.write(p1.introduce() + "<br />");
+    document.write(p1.coding() + "<br />");
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

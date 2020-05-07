@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    /* 객체의 로직을 그대로 물려 받기 
+      -> 단, 필요한 부분을 수정,변경,삭제 하여 파생된 새로운 객체 생성 */
+
+    /* 상속 준비 */
+    /* 생성자(함수) 이용 */
+    function person(name) {
+      this.name = name;
+    }
+    
+    person.prototype.name = null;
+    person.prototype.introduce = function() {
+      return "My name is " + this.name;
+    }
+
+    var p1 = new person("choco");
+    document.write(p1.introduce() + "<br />");
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

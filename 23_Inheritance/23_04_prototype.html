@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    /* prototype -> 상속의 구체적수단 */
+
+    function Ultra() {}
+    Ultra.prototype.ultraProperty = true;
+
+    function Super() {}
+    Super.prototype = new Ultra();
+
+    function Sub() {}
+    Sub.prototype = new Super();
+
+    /* 객체 생성 후 프로퍼티에 접근 -> 부모를 찾아가서 true의 값을 찾음 */
+    /* 가능한 이유 -> 생성자는 함수 -> 새로운 객체를 만들어서 리턴 */
+    var o = new Sub();
+    console.log(o.ultraProperty);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
