@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    /* 표준 내장 객체의 확장(배열) */
+
+    var arr = new Array("JS", "python", "Java", "C++", "Ruby");
+    function getRandomValueFromArray(arr){
+      /* 랜덤값 정수로 만들기 */
+      var index = Math.floor(arr.length * Math.random());
+      return arr[index];
+    }
+    console.log(getRandomValueFromArray(arr));
+    document.write(getRandomValueFromArray(arr) + "<br />");
+    document.write(getRandomValueFromArray(arr) + "<br />");
+    document.write(getRandomValueFromArray(arr) + "<br />");
+    document.write(getRandomValueFromArray(arr) + "<br />");
+    document.write(getRandomValueFromArray(arr) + "<br />");
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

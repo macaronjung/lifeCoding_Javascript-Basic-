@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    /* 배열 + 상속 */
+    
+    /* 배열 생성자를 통해 만든 객체가 random이란 메소드를 소유 */
+    Array.prototype.random = function() { /* 인자를 받지 않아 더 명확한 코드가 됨 */
+      /* random 메소드 안에서 this -> 배열 객체를 가리킴(var arr) */
+      var index = Math.floor(this.length * Math.random());
+      return this[index];
+    }
+
+    var arr = new Array("JS", "python", "Java", "C++", "Ruby");
+    
+    console.log(arr.random());
+    document.write(arr.random() + "<br />");
+    document.write(arr.random() + "<br />");
+    document.write(arr.random() + "<br />");
+    document.write(arr.random() + "<br />");
+    document.write(arr.random() + "<br />");
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
